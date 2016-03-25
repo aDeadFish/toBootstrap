@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 ,maximum-scale=1.0,  user-scalable=no">
+    <meta name="description" content="bootstrap">
+    <meta name="keyword" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <title></title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" >
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+   <div class="navbar-header">
+      <a class="navbar-brand" href="#">W3Cschool</a>
+   </div>
+   <div>
+      <ul class="nav navbar-nav">
+         <li class="active"><a href="#">iOS</a></li>
+         <li><a href="#">SVN</a></li>
+         <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               Java 
+               <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+               <li><a href="#">jmeter</a></li>
+               <li><a href="#">EJB</a></li>
+               <li><a href="#">Jasper Report</a></li>
+               <li class="divider"></li>
+               <li><a href="#">分离的链接</a></li>
+               <li class="divider"></li>
+               <li><a href="#">另一个分离的链接</a></li>
+            </ul>
+         </li>
+      </ul>
+   </div>
+</nav>
+
+<nav class="navbar navbar-default" role="navigation">
+   <div class="navbar-header">
+      <a class="navbar-brand" href="#">W3Cschool</a>
+   </div>
+   <div>
+      <ul class="nav navbar-nav">
+         <li class="active"><a href="#">iOS</a></li>
+         <li><a href="#">SVN</a></li>
+         <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               Java 
+               <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+               <li><a href="#">jmeter</a></li>
+               <li><a href="#">EJB</a></li>
+               <li><a href="#">Jasper Report</a></li>
+               <li class="divider"></li>
+               <li><a href="#">分离的链接</a></li>
+               <li class="divider"></li>
+               <li><a href="#">另一个分离的链接</a></li>
+            </ul>
+         </li>
+      </ul>
+   </div>
+</nav>
+
+<div class="container">
+	<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+		模态框
+	</button>
+	<div class="modal fade" tabindex=-1 id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" type="button" data-dismiss="modal" 
+                 		aria-hidden="true">x
+             		</button>
+             		<h4 class="modal-title" id="myModalLabel">
+                 		模态框（Modal）标题
+              		</h4>
+				</div>
+				<div class="modal-body">
+						<textarea  class="form-control" rows="3" placeholder="点击关闭按钮检查事件功能"></textarea>
+				</div>
+				<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true">
+							关闭
+						</button>
+						<button type="button" class="btn btn-primary">提交更改</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<button id="fat-btn" class="btn btn-primary" data-loding-text="Loading..." type="button">加载状态</button>
+	<button class="btn btn-primary" data-toggle="button">单个切换</button>
+	<div class="btn-group" data-toggle="buttons">
+		<label class="btn btn-primary">
+			<input type="checkbox">选项 1
+		</label>
+		<label class="btn btn-primary">
+			<input type="checkbox">选项 2
+		</label>
+		<label class="btn btn-primary">
+			<input type="checkbox">选项 3
+		</label>
+	</div>
+	<div class="btn-group" data-toggle="buttons">
+		<label class="btn btn-primary">
+			<input type="radio" name="options" id="option1">选项 1
+		</label>
+		<label class="btn btn-primary">
+			<input type="radio" name="options" id="option2">选项 2
+		</label>
+		<label class="btn btn-primary">
+			<input type="radio" name="options" id="option3">选项 3
+		</label>
+	</div>
+</div>
+
+
+<script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    	$('.dropdown-toggle').dropdown();
+    	$('#fat-btn').click(function(){
+    		$(this).button('loading').delay(1000).queue(function(){
+    			$(this).button('reset');
+    		});
+    	});
+    </script>
+</body>
+</html>
